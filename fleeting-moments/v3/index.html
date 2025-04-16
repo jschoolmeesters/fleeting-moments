@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.1/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/osresearch/p5.projection@0.2.1/library/p5.projection.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css"> 
+  </head>
+  <body class="bg-black text-white">
+
+    <!-- Overlay elements -->
+    <img id="logo-top-left" class="mix-blend-soft-light invert opacity-50 w-1/3 md:w-1/4 absolute top-0 left-0 m-4" src="../images/fm_logo_1.svg"/>
+    <img class="opacity-25 invert w-1/3 md:w-1/4 fixed bottom-0 right-0 m-4" src="../images/fm_logo_1.svg"/>
+    <div id="no-files-txt-wrapper" class="hidden md:flex bottom-0 min-size items-center justify-center absolute md:w-[100vh] md:h-[100vh] mix-blend-soft-light">
+      <span id="no-files-txt" class="text-2xl waldenburg-vf">No moments uploaded yet.</span>
+    </div>
+
+
+    <!-- Flex row reverse container -->
+    <div id="container" class="flex flex-col md:flex-row-reverse overflow-hidden">
+
+      <!-- Text -->
+      <div class="flex-1 w-full md:w-[calc(100vw-100vh)] h-auto md:h-[100vh] p-4">
+        <div class="grid grid-flow-col grid-rows-2 gap-2 waldenburg-vf mb-4 pt-2 border-t-2 border-t-white">
+          <div>
+            <span class="lucifer-italic">Project Name</span><br>
+            <span>Fleeting Moments</span>
+          </div>
+          <div>
+            <span class="lucifer-italic">Author</span><br>
+            <span>Jordy Schoolmeesters</span>
+          </div>
+          <div>
+            <span class="lucifer-italic">Medium</span><br>
+            <span>Web, Interactive</span>
+          </div>
+          <div>
+            <span class="lucifer-italic">Tech Stack</span><br>
+            <span>HTML, Tailwind CSS, p5.js</span>
+          </div>
+        </div>
+        <p class="waldenburg-vf mb-4 pt-2 border-t-2 border-t-white">Fleeting Moments is an interactive reflection on how digital memories lose meaning through their volume and velocity. Moments gradually distort and dissolve, mirroring how our memories fade when everything is stored without intention or recollection.</p>
+        <p class="waldenburg-vf mb-6 pt-2 border-t-2 border-t-white">Give it a try, upload either 4 or 16 JPEG images and see what happens.</p>
+        <div id="buttons" class="justify-start flex flex-row gap-x-2"></div>
+        </div>
+
+        <!-- Canvas -->
+        <!-- Appended through p5.js-->
+    </div>
+    
+  </body>
+</html>
